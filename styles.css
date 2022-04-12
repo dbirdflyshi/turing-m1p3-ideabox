@@ -7,7 +7,9 @@ body{
 .font {
     font-family: 'Open Sans', sans-serif;
 }
-
+.hidden {
+    display: none !important;
+}
 /* --------------------Nav Styles-------------------- */
 .nav-header{
    font-weight: bold; 
@@ -58,7 +60,7 @@ main {
     align-items: center;
     justify-content:space-evenly;
     background-color: #A9AAD2;
-    height: 40%;
+    height: 35%;
     overflow : hidden;
     margin-top: -10px;
 }
@@ -125,5 +127,85 @@ main {
 .idea-viewer{
     background-color: #EAEAF4;
     margin-top: -16px;
-    height: 62%;
+    height: 64%;
+}
+
+.saved-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px;
+    padding: 20px;
+}
+
+.idea{
+    height: 225px;
+    width: 225px;
+    background-color:#FFFFFF;
+}
+
+.idea-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1F1F3D;
+    height: 30px;
+    border:solid #1F1F3D;
+    border-width: 2px;
+}
+
+.star-img{
+    width:32px;
+}
+.star-button{
+    background-color:#1F1F3D;
+    border:0px;
+}
+
+.x-img{
+    width: 32px;
+}
+.x-button{
+    background-color: #1F1F3D;
+    border: 0px;
+}
+
+.idea-body {
+    border-width: 5px;
+    border-color: #1F1F3D;
+    background-color: #FFFFFF;
+    height: 160px;
+    border:solid #1F1F3D;
+    border-width: 2px;
+}
+
+.idea-footer{
+    display:flex;
+    flex-direction: row;
+    background-color: #5356A4;
+    color: #e9e9f3;
+    height: 30px;
+    border:solid #1F1F3D;
+    border-width: 2px;
+}
+
+.idea-message{
+    margin-left: 10px;
+}
+
+.idea-title{
+    font-weight: bold;
+    margin: 5px 0px 0px 10px;
+}
+
+.footer-p{
+    margin-top: 3px;
+}
+
+.comment-img{
+    width: 30px;
+}
+.comment-button{
+    border : 0px;
+    padding: 0px;
+    background-color: #5356A4;
 }

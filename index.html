@@ -2,7 +2,7 @@
     <head>
         <title>💡 IdeaBox 💡</title>
         <link rel="stylesheet" href="./styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">    </head>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;650&display=swap" rel="stylesheet">    </head>
     <body>
         <script src="main.js"></script>
         <nav>
@@ -23,16 +23,35 @@
                     <br><br>
                     <label class = 'builder-text font' for='body'>Body</label>
                     <br>
-                    <input class = 'builder-input' type='text' id='body' name='body'></input>
+                    <textarea class = 'builder-input' rows = '5' id = 'body'></textarea>
                     <br><br>
                     <button class='builder-button font'>Save</button>
                 </form>
                 <form>
                     <button class = 'search-button'>.</button>
                     <input class = 'search-input' type="text" name="search" placeholder = 'Search ideas'></input>
+                    <br><br>
+                </form>       
             </section>
-            <section class = 'idea-viewer'>
-                <p>Put Your Idea Viewer Here</p>
+            <section class='idea-viewer font saved-ideas-grid'>
+                <article>
+                    <section class= 'idea'>
+                        <article class='idea-header'>
+                            <button class='star-button'><img class='star-img' src='./assets/star-active.svg'></button>
+                            <button class='star-button hidden'><img class='star-img' src='./assets/star.svg'></button>
+                            <button class='x-button'><img class='x-img' src='./assets/delete.svg'></button>
+                            <button class='x-button hidden'><img class='x-img' src='./assets/delete-active.svg'></button>
+                        </article>
+                        <article class='idea-body'>
+                            <h3 class = 'idea-title'> Idea title</h3>
+                            <p class = 'idea-message'> Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+                        </article>
+                        <article class='idea-footer'>
+                            <button class = 'comment-button'><img class = 'comment-img' src = './assets/comment.svg'></button>
+                            <p class = 'footer-p'>Comment</p>
+                        </article>
+                    </section>
+                </article>
             </section>
         </main>
     </body>
