@@ -1,0 +1,129 @@
+/* -----------------------------Global Styles-------------------------------- */
+body{
+    display : flex;
+    flex-direction : row;
+}
+
+.font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --------------------Nav Styles-------------------- */
+.nav-header{
+   font-weight: bold; 
+   padding: 5px 0px 5px 15px;
+   color: #E9E9F3;
+}
+
+.nav-body-label{
+    font-weight: light;
+    padding: 5px 0px 5px 15px;
+    color: #BFBFDD;
+    font-size: 14;
+}
+
+nav{
+    background-color: #1F1F3D;
+    margin: -8px 0px -8px -8px;
+    width: 300px;
+    
+}
+
+hr.nav{
+    border: 1px solid #353567;
+}
+
+.nav-button{
+    background-color: #5356A4;
+    border: 1px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    color: #E9E9F3;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ---------------Main Section Styles---------------- */
+main {
+    height: 100%;
+    width: 100%;
+    margin-right: -8px;
+}
+
+/* -------Idea Builder Styles------- */
+.idea-builder{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: #A9AAD2;
+    height: 40%;
+    overflow : hidden;
+    margin-top: -10px;
+}
+
+#title{
+    width : 350px;
+    height: 40px;
+    border-width: 2px;
+    border-color: #888abc;
+    border-radius: 3px;
+}
+
+#body{
+    height: 80px;
+    width: 350px;
+    border-width: 2px;
+    border-color: #888abc;
+    border-radius: 3px;
+}
+
+.builder-text{
+    color: #1F1F3D;
+    font-size: 16;
+}
+
+.builder-button{
+    background-color:#353567;
+    border: 1px;
+    color:#E9E9F3;
+    width: 350px;
+    height: 40px;
+    font-size : 18;
+    border-width: 2px;
+    border-color: #888abc;
+    border-radius: 3px;
+}
+
+.search-button{
+    width: 40px;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 3px 0px 0px 3px;
+    background: url('./assets/search.svg') center no-repeat;
+    background-color: #353567;
+    background-size: 75% 75%;
+}
+
+.search-input{
+    width: 312px;
+    height: 40px;
+    border-width: 2px;
+    border-color: #888abc;
+    font-size : 18;
+    border-radius: 0px 3px 3px 0px;
+    margin-left: -5px;
+}
+
+::placeholder {
+    color: #888abc;
+    font-size: 16;
+}
+/* -------Idea Viewer Styles------- */
+
+.idea-viewer{
+    background-color: #EAEAF4;
+    margin-top: -16px;
+    height: 62%;
+}
