@@ -28,7 +28,6 @@ nav{
     background-color: #1F1F3D;
     margin: -8px 0px -8px -8px;
     width: 300px;
-    
 }
 
 hr.nav{
@@ -44,6 +43,7 @@ hr.nav{
     color: #E9E9F3;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 /* ---------------Main Section Styles---------------- */
@@ -60,7 +60,7 @@ main {
     align-items: center;
     justify-content:space-evenly;
     background-color: #A9AAD2;
-    height: 35%;
+    height: 350px;
     overflow : hidden;
     margin-top: -10px;
 }
@@ -96,6 +96,12 @@ main {
     border-width: 2px;
     border-color: #888abc;
     border-radius: 3px;
+    cursor: pointer;
+}
+.disabled{
+    background-color:#E9E9F3;
+    color: #1F1F3D;
+    cursor: not-allowed;
 }
 
 .search-button{
@@ -106,6 +112,7 @@ main {
     background: url('./assets/search.svg') center no-repeat;
     background-color: #353567;
     background-size: 75% 75%;
+    cursor: pointer;
 }
 
 .search-input{
@@ -127,7 +134,7 @@ main {
 .idea-viewer{
     background-color: #EAEAF4;
     margin-top: -16px;
-    height: 64%;
+    height: 58%;
 }
 
 .saved-ideas-grid {
@@ -159,6 +166,7 @@ main {
 .star-button{
     background-color:#1F1F3D;
     border:0px;
+    cursor: pointer;
 }
 
 .x-img{
@@ -167,6 +175,7 @@ main {
 .x-button{
     background-color: #1F1F3D;
     border: 0px;
+    cursor: pointer;
 }
 
 .idea-body {
@@ -208,4 +217,5 @@ main {
     border : 0px;
     padding: 0px;
     background-color: #5356A4;
+    cursor: pointer;
 }
