@@ -10,7 +10,7 @@ var deleteButton = document.querySelector('.saved-ideas-grid');
 // event listeners go here 👇
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 saveButton.addEventListener('click', pressSave);
-deleteButton.addEventListener('click',deleteIdea);
+deleteButton.addEventListener('click', ideaAction);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Global Variables Go here 👇
@@ -38,7 +38,7 @@ function pressSave(){
     captureIdea();
     clearTextBoxes();
     storeIdea(ideaTitle, ideaBody);
-    displayIdea(ideas);
+    displayIdeas(ideas);
 }
 
 function captureIdea(){
@@ -59,20 +59,43 @@ function clearTextBoxes(){
 function storeIdea(title,body){
     var idea = new Idea(title,body);
     ideas.push(idea);
-    console.log(ideas);
 }
 
-function deleteIdea(event){
-    if (ideas.length === 0){
-         alert("You can't delete this idea! When you submit a new one, this one will be overwritten.")    
-    } else {
-        var id = parseInt(event.target.id);
-        ideas = ideas.filter(ideas => ideas.id !== id);
-        displayIdea()
+function ideaAction(event){
+    var id = parseInt(event.target.id);  
+    var className = event.target.className;
+    deleteIdea(id,className)
+    favoriteIdea(id)
+}
+
+function deleteIdea(idNum,className){
+    if (className === 'x-img'){
+        ideas = ideas.filter(ideas => ideas.id !== idNum );
+        displayIdeas()
     }
 }
 
-function displayIdea(){
+function favoriteIdea(idNum) {
+    for (var i = 0; i < ideas.length; i++) {
+        if (ideas[i].id === idNum && ideas[i].starred === false) {
+            ideas[i].starred = true;
+        }else if (ideas[i].id === idNum && ideas[i].starred === true){
+            ideas[i].starred = false;
+        }
+    } 
+    displayIdeas()
+}
+
+function changeStar(index) {
+    if (ideas[index].starred === true) {
+        output = "<button class='star-button-active' id=" + ideas[index].id + "><img class='star-img-active' id=" + ideas[index].id + " src='./assets/star-active.svg'></button>"
+    } else {
+        output = "<button class='star-button'id=" + ideas[index].id + " > <img class='star-img' id=" + ideas[index].id + " src='./assets/star.svg'></button>"
+    }
+    return output;
+}
+
+function displayIdeas(){
     var ideaViewer = document.querySelector('.idea-viewer')
     ideaViewer.innerHTML = '';
     for (var i = 0; i < ideas.length; i++) {   
@@ -80,12 +103,11 @@ function displayIdea(){
            ("<article id = "+ideas[i].id+">"+
                 "<section class='idea'>"+
                     "<article class='idea-header'>"+
-                        "<button class='star-button hidden'><img class='star-img' id="+ideas[i].id+" src='./assets/star-active.svg'></button>"+
-                        "<button class='star-button' > <img class='star-img' id="+ideas[i].id+" src='./assets/star.svg'></button>"+
+                        changeStar(i)+
                         "<button class='x-button' > <img class='x-img' id="+ideas[i].id+" src='./assets/delete.svg'></button>"+
                         "<button class='x-button hidden'><img class='x-img' id="+ideas[i].id+" src='./assets/delete-active.svg'></button>"+
                     "</article>"+
-                        "<article class='idea-body'>"+
+                    "<article class='idea-body'>"+
                         "<h3 class='idea-title'>"+ideas[i].title+"</h3 >"+
                         "<p class='idea-message'>"+ideas[i].body+"</p>"+
                     "</article>"+

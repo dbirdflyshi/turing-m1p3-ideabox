@@ -163,9 +163,18 @@ main {
 .star-img{
     width:32px;
 }
+.star-img-active {
+    width: 32px;
+}
 .star-button{
     background-color:#1F1F3D;
     border:0px;
+    cursor: pointer;
+}
+
+.star-button-active {
+    background-color: #1F1F3D;
+    border: 0px;
     cursor: pointer;
 }
 
