@@ -41,7 +41,7 @@ The spec for this project can be found [here](https://frontend.turing.edu/projec
 - Comments on ideas saved
 
 ## Deployed Page
-Visit the published page [here](https:\\dbirdflyshi.github.io/turning-m1p3-ideabox/)
+Visit the published page [here](https://dbirdflyshi.github.io/turing-m1p3-ideabox/)
 
 # Set up
 1) Fork this repo
