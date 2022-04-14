@@ -1,4 +1,4 @@
-const Idea = require("./idea");
+const Idea = require("./Idea");
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // query selector variables go here 👇
